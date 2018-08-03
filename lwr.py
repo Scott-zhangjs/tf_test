@@ -1,15 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""
-Desc:
-
-Authors:  zhangjingshuai
-Contact:  zhangjingshuai@baidu.com)
-Date:     2018/8/3
-Version:  0.5
-License : Copyright(C), Baidu TIC
-"""
-# python 3.5.3  蔡军生
+# python 3.5.3  @蔡军生
 # http://edu.csdn.net/course/detail/2592
 #  计算加权回归
 # locally weighted linear regression
@@ -89,15 +80,17 @@ def genData(numPoints, bias, variance):
     return x, y
 
 
-# 生成数据
-a1, a2 = genData(100, 10, 0.6)
+if __name__ == '__main__':
 
-a3 = []
-# 计算每一点
-for i in a1:
-    pdf = lwr_predict(a1, a2, i, 1)
-    a3.append(pdf.tolist()[0])
+    # 生成数据
+    a1, a2 = genData(100, 10, 0.6)
 
-plt.plot(a1[:, 1], a2, "x")
-plt.plot(a1[:, 1], a3, "r-")
-plt.show()
+    a3 = []
+    # 计算每一点
+    for i in a1:
+        pdf = lwr_predict(a1, a2, i, 1)
+        a3.append(pdf.tolist()[0])
+
+    plt.plot(a1[:, 1], a2, "x")
+    plt.plot(a1[:, 1], a3, "r-")
+    plt.show()

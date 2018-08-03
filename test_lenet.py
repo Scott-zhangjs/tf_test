@@ -4,10 +4,9 @@
 Desc:
 
 Authors:  zhangjingshuai
-Contact:  zhangjingshuai@baidu.com)
+Contact:  zhangjs@buaa.edu.cn
 Date:     2018/8/3
 Version:  0.5
-License : Copyright(C), Baidu TIC
 """
 from sklearn.utils import shuffle
 
